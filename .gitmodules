@@ -1,0 +1,3 @@
+[submodule "nerfstudio-low-data"]
+	path = nerfstudio-low-data
+	url = https://github.com/Agaggar/nerfstudio-low-data.git
