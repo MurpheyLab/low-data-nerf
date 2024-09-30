@@ -155,12 +155,21 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
-/* .img-left {
+.img-left {
   clip: rect(0, 100%, 100%, 0);
 }
 .img-right {
   clip: rect(0, 100%, 100%, 50%);
-} 
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: gray;
+  cursor: ew-resize;
+}
 .image {
   position: absolute;
   top: 0;
@@ -168,31 +177,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-} */
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-#image2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  clip: rect(0, 100%, auto, 0);
-}
-
-.slider {
-  position: absolute;
-  cursor: ew-resize;
-  width: 10px;
-  height: 100%;
-  background-color: #2196F3;
-  z-index: 10;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .image-container {
   position: relative;
