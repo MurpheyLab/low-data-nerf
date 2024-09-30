@@ -155,32 +155,30 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
-.img-left {
-  clip: rect(0, 100%, 100%, 0);
-}
-.img-right {
-  clip: rect(0, 100%, 100%, 50%);
-}
-.slider {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 100%;
-  background: gray;
-  cursor: ew-resize;
-}
-.image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.image-container {
+.image-comp-container {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+.image-overlay {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+.image-overlay-over img {
+  display: block;
+  vertical-align: middle;
+}
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  opacity: 0.7;
+  border-radius: 50%;
 }
