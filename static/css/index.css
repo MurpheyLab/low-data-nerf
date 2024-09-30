@@ -159,7 +159,7 @@ body {
   position: relative;
   width: 100%;
   height: 800;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .image-overlay {
   position: absolute;
