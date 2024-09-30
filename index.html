@@ -175,7 +175,7 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/ICRA_2025_compress.mp4"
+          <source src="./static/videos/main_video_renders.mp4"
                   type="video/mp4">
         </video>
         </script>
@@ -184,8 +184,10 @@
            This video accompanies our paper submission.
         </h2> -->
         <h2 class="subtitle has-text-centered"></h2>
-           Only our data augmentation method generates reasonable scene reconstructions without visual artifacts.
-           This video outlines our process and compares performance with other dat aaugmentation methods.
+           Only our data augmentation method generates reasonable scene reconstructions without visual artifacts. 
+           Hallucinations, occlusions, and other visual artifacts are common when training with sparse data.
+           a) shows ground truth, b) shows our method, c) shows hallucinations (data augmented by <a href="https://arxiv.org/abs/2311.17874">FisherRF</a> method), 
+           and d) shows white spots (data collected by <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9913658">Entropy</a> method).
         </h2>
       </div>
     </div>
