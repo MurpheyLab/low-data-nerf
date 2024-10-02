@@ -223,28 +223,17 @@
             <h2 class="subtitle has-text-centered">Ours vs. FisherRF</h2>
           </div>
         </div>
-        <div class="img-compare-container">
-          <div class="both-images">
-            <div class="img-1" style="background-image: url(https://i.imgur.com/s08MkXC.jpg)no-repeat;"></div>
-            <div class="img-2" style="background-image: url(https://i.imgur.com/PfIWek4.jpg) no-repeat;"></div>
+        <div class="img-comp-container">
+          <div class="img-comp-img">
+            <img src="./static/images/ours_dozer.png" width="400" height="400">
           </div>
-          <div class="slider">
-            <div class="drag-line">
-              <span></span>
-            </div>
-            <input type="range" min="1" max="100" value="50">
+          <div class="img-comp-img img-comp-overlay">
+            <img src="./static/images/fisher_dozer.png" width="400" height="400">
           </div>
         </div>
-
         <script>
-          const slider = document.querySelector(".slider input");
-          const img = document.querySelector(".both-images .img-2");
-          const dragLine = document.querySelector(".slider .drag-line");
-          slider.oninput = ()=>{
-            let sliderVal = slider.value;
-            dragLine.style.left = sliderVal + "%";
-            img.style.width = sliderVal + "%";
-          }
+          import {initComparisons} from "./static/js/slider.js"
+          initComparisons();
         </script>
         <!-- <div class='img-container'>
           <div class="img background-img" style="background-image: url(https://i.imgur.com/s08MkXC.jpg);"></div>
