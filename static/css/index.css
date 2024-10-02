@@ -183,14 +183,14 @@ body {
   border-radius: 50%;
 } */
 
-/* .container {
+.img-container {
   position: relative;
   width: 400px;
   height: 400px;
   border: 2px solid white;
 }
 
-.container .img {
+.img-container .img {
   position: absolute;
   top: 0;
   left: 0;
@@ -199,14 +199,14 @@ body {
   background-size: 400px 100%;
 }
 
-.container .background-img {
+.img-container .background-img {
 }
 
-.container .foreground-img {
+.img-container .foreground-img {
   width: 50%;
 }
 
-.container .slider {
+.img-container .slider {
   position: absolute;
   -webkit-appearance: none;
   appearance: none;
@@ -218,11 +218,11 @@ body {
   transition: all 0.2s;
 }
 
-.container .slider:hover {
+.img-container .slider:hover {
   background: rgba(242, 242, 242, 0.1);
 }
 
-.container .slider::-webkit-slider-thumb {
+.img-container .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 6px;
@@ -231,14 +231,14 @@ body {
   cursor: pointer;
 }
 
-.container .slider::-moz-range-thumb {
+.img-container .slider::-moz-range-thumb {
   width: 6px;
   height: 600px;
   background: white;
   cursor: pointer;
 }
 
-.container .slider-button {
+.img-container .slider-button {
   pointer-events: none;
   position: absolute;
   width: 30px;
@@ -252,8 +252,8 @@ body {
   align-items: center;
 }
 
-.container .slider-button:after, 
-.container .slider-button:before {
+.img-container .slider-button:after, 
+.img-container .slider-button:before {
   content: "";
   padding: 3px;
   display: inline-block;
@@ -261,10 +261,10 @@ body {
   border-width: 0 2px 2px 0;
 }
 
-.container .slider-button:after {
+.img-container .slider-button:after {
   transform: rotate(-45deg);
 }
 
-.container .slider-button:before {
+.img-container .slider-button:before {
   transform: rotate(135deg);
-} */
+}
