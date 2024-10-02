@@ -1,10 +1,18 @@
-document.getElementById("img-slider").on("input change", (e)=>{
+// Get the slider element and add event listeners for 'input' and 'change'
+const imgSlider = document.getElementById("img-slider");
+imgSlider.addEventListener("input", handleSliderChange);
+imgSlider.addEventListener("change", handleSliderChange);
+
+// Function to handle slider changes
+export function handleSliderChange(e) {
   const sliderPos = e.target.value;
+  
   // Update the width of the foreground image
-  document.getElementById('.foreground-img').css('width', `${sliderPos}%`)
+  document.querySelector('.foreground-img').style.width = `${sliderPos}%`;
+  
   // Update the position of the slider button
-  document.getElementById('.img-slider-button').css('left', `calc(${sliderPos}% - 18px)`)
-});
+  document.querySelector('.img-slider-button').style.left = `calc(${sliderPos}% - 18px)`;
+}
 
 // export function initComparisons() {
 //     var x, i;
