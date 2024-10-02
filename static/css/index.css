@@ -212,15 +212,15 @@ body {
   appearance: none;
   width: 100%;
   height: 100%;
-  /* background: rgba(242, 242, 242, 0.3); */
+  background: rgba(242, 242, 242, 0.3);
   outline: none;
   margin: 0;
   transition: all 0.2s;
 }
 
-/* .img-container .slider:hover {
+.img-container .slider:hover {
   background: rgba(242, 242, 242, 0.1);
-} */
+}
 
 .img-container .img-slider::-webkit-slider-thumb {
   -webkit-appearance: none;

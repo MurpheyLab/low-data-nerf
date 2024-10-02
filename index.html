@@ -21,6 +21,7 @@
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
@@ -229,8 +230,15 @@
           <input type="range" min="1" max="100" value="50" class="img-slider" id="img-slider">
           <div class='img-slider-button'></div>
           <script>
-            import { handleSliderChange } from './static/js/slider.js';
-            handleSliderChange();
+            $(document).ready(function() {
+              $("#img-slider").on("input change", (e)=>{
+                const sliderPos = e.target.value;
+                // Update the width of the foreground image
+                $('.foreground-img').css('width', `${sliderPos}%`)
+                // Update the position of the slider button
+                $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`)
+              });
+            });
           </script>
         </div>
       </div>
