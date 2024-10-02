@@ -183,7 +183,7 @@ body {
   border-radius: 50%;
 } */
 
-/* .img-container {
+.img-container {
   position: relative;
   width: 400px;
   height: 400px;
@@ -267,4 +267,4 @@ body {
 
 .img-container .img-slider-button:before {
   transform: rotate(135deg);
-} */
+}
