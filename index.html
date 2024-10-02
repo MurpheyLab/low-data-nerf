@@ -223,30 +223,26 @@
             <h2 class="title is-3">See how our augmentation compares with others!</h2>
           </div>
         </div>
-        <h2 class="subtitle">Ours vs. FisherRF</h2>
-        <div class='img-container'>
-          <div class="subtitle top-left">Ours</div>
-          <div class="subtitle top-right">FisherRF</div>
-          <div class="img-in-container background-img" style="background-image: url(./static/images/fisher_dozer.png); background-repeat: no-repeat;" id="bgImg"></div>
+      </div>
+      <div class='img-container'>
+        <div class="img-in-container background-img" style="background-image: url(./static/images/fisher_dozer.png); background-repeat: no-repeat;" id="bgImg"></div>
 
-          <div class='img-in-container foreground-img' style="background-image: url(./static/images/ours_dozer.png);" id="fgImg"></div>
+        <div class='img-in-container foreground-img' style="background-image: url(./static/images/ours_dozer.png);" id="fgImg"></div>
+        
+        <input type="range" min="1" max="100" value="50" class="img-slider" id="imgSlider">
+        <div class="subtitle top-left">Ours</div>
+        <div class="subtitle top-right">FisherRF</div>
+
+        <script>
+          var slider = document.getElementById("imgSlider");
+          var fg_img = document.getElementById("fgImg");
+          var bg_img = document.getElementById("bgImg");
           
-          <input type="range" min="1" max="100" value="50" class="img-slider" id="imgSlider">
-          <div class='img-slider-button' id="slider-button"></div>
-
-          <script>
-            var slider = document.getElementById("imgSlider");
-            var fg_img = document.getElementById("fgImg");
-            var bg_img = document.getElementById("bgImg");
-            var slider_button = document.getElementById("slider-button");
-            
-            slider.oninput = function() {
-              fg_img.style.width = this.value;
-              fg_img.style.width = slider.value + "%";
-              slider_button.style.left = this.value - 18;
-            }
-          </script>
-        </div>
+          slider.oninput = function() {
+            fg_img.style.width = this.value;
+            fg_img.style.width = slider.value + "%";
+          }
+        </script>
       </div>
     </section>
 
