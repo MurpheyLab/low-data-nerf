@@ -209,20 +209,18 @@ body {
 .img-container .img-slider {
   position: absolute;
   -webkit-appearance: none;
-  appearance: none;
+  /* appearance: none; */
   width: 100%;
   height: 100%;
   background: rgba(242, 242, 242, 0.3);
   outline: none;
   margin: 0;
   transition: all 0.2s;
+  opacity: 0.7;
+  -webkit-transition: .2s;
 }
 
-.img-container .slider:hover {
-  background: rgba(242, 242, 242, 0.1);
-}
-
-.img-container .img-slider::-webkit-slider-thumb {
+.img-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 6px;
@@ -231,14 +229,14 @@ body {
   cursor: pointer;
 }
 
-.img-container .img-slider::-moz-range-thumb {
+.img-slider::-moz-range-thumb {
   width: 6px;
   height: 400px;
   background: white;
   cursor: pointer;
 }
 
-.img-container .img-slider-button {
+.img-slider-button {
   pointer-events: none;
   position: absolute;
   width: 30px;

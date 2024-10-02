@@ -227,18 +227,17 @@
         <div class='img-container'>
           <div class="img background-img" style="background-image: url(https://i.imgur.com/s08MkXC.jpg);"></div>
           <div class='img foreground-img' style="background-image: url(https://i.imgur.com/PfIWek4.jpg);"></div>]
-          <input type="range" min="1" max="100" value="50" class="img-slider" id="img-slider">
+          <input type="range" min="1" max="100" value="50" class="img-slider" id="imgSlider">
           <div class='img-slider-button'></div>
           <script>
-            $(document).ready(function() {
-              $("#img-slider").on("input change", (e)=>{
-                const sliderPos = e.target.value;
-                // Update the width of the foreground image
-                $('.foreground-img').css('width', `${sliderPos}%`)
-                // Update the position of the slider button
-                $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`)
-              });
-            });
+            var slider = document.getElementById("imgSlider");
+            var fg_img = document.getElementsByClassName("img foreground-img");
+            var slider_button = document.getElementsByClassName("img-slider-button");
+            
+            slider.oninput = function() {
+              fg_img.style.width = this.value;
+              slider_button.style.left = this.value - 18;
+            }
           </script>
         </div>
       </div>
