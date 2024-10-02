@@ -183,7 +183,7 @@ body {
   border-radius: 50%;
 } */
 
-.container {
+/* .container {
   position: relative;
   width: 400px;
   height: 400px;
@@ -200,13 +200,11 @@ body {
 }
 
 .container .background-img {
-  /* background-image: url('https://i.imgur.com/s08MkXC.jpg'); */
   width: 100%;
   height: 100%;
 }
 
 .container .foreground-img {
-  /* background-image: url('https://i.imgur.com/PfIWek4.jpg'); */
   width: 50%;
   height: 100%;
 }
@@ -270,4 +268,4 @@ body {
   border: solid #5D5D5D;
   border-width: 0 2px 2px 0;
   transform: rotate(135deg);
-}
+} */
