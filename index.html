@@ -230,6 +230,10 @@
           <!-- <div class='img foreground-img' style="background-image: url(static/images/fisher_dozer.png);"></div> -->
           <input type="range" min="1" max="100" value="50" class="img-slider" name='slider' id="img-slider">
           <div class='img-slider-button'></div>
+          <script>
+            import { handleSliderChange } from './static/js/slider.js';
+            handleSliderChange(document.getElementsByClassName("img-slider-button"));
+          </script>
         </div>
       </div>
     </section>

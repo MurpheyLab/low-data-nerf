@@ -1,5 +1,7 @@
-// Function to handle slider movement
-function handleSliderChange(sliderPos) {
+// Function to handle slider changes
+export function handleSliderChange(e) {
+  const sliderPos = e.target.value;
+  
   // Update the width of the foreground image
   document.querySelector('.foreground-img').style.width = `${sliderPos}%`;
   
@@ -7,42 +9,11 @@ function handleSliderChange(sliderPos) {
   document.querySelector('.img-slider-button').style.left = `calc(${sliderPos}% - 18px)`;
 }
 
-// Variables to track mouse movement
-let isDragging = false;
+// Get the slider element and add event listeners for 'input' and 'change'
+const imgSlider = document.getElementById("img-slider");
+imgSlider.addEventListener("input", handleSliderChange);
+imgSlider.addEventListener("change", handleSliderChange);
 
-// Handle the mouse down event (when the user clicks on the slider button)
-document.querySelector('.img-slider-button').addEventListener('mousedown', (e) => {
-  isDragging = true; // Start dragging
-  document.body.style.cursor = 'grabbing'; // Change cursor to indicate dragging
-});
-
-// Handle the mouse move event (when the user drags the slider button)
-document.addEventListener('mousemove', (e) => {
-  if (isDragging) {
-    // Get the bounding box of the slider track (or container)
-    const slider = document.getElementById('img-slider');
-    const rect = slider.getBoundingClientRect();
-
-    // Calculate the new slider position as a percentage based on mouse position
-    const offsetX = e.clientX - rect.left;
-    let sliderPos = (offsetX / rect.width) * 100;
-
-    // Clamp the value between 0% and 100% to prevent overflow
-    sliderPos = Math.max(0, Math.min(100, sliderPos));
-
-    // Update the slider's value and visuals
-    slider.value = sliderPos;
-    handleSliderChange(sliderPos);
-  }
-});
-
-// Handle the mouse up event (when the user releases the mouse button)
-document.addEventListener('mouseup', () => {
-  if (isDragging) {
-    isDragging = false; // Stop dragging
-    document.body.style.cursor = 'default'; // Reset the cursor
-  }
-});
 
 // export function initComparisons() {
 //     var x, i;
