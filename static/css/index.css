@@ -183,7 +183,7 @@ body {
   border-radius: 50%;
 } */
 
-.container {
+/* .container {
   position: relative;
   width: 400px;
   height: 400px;
@@ -200,13 +200,10 @@ body {
 }
 
 .container .background-img {
-  /* width: 100%;
-  height: 100%; */
 }
 
 .container .foreground-img {
   width: 50%;
-  /* height: 100%; */
 }
 
 .container .slider {
@@ -252,7 +249,7 @@ body {
   top: calc(50% - 18px);
   display: flex;
   justify-content: center;
-  align-items: center; /* Equivalent to @include center */
+  align-items: center;
 }
 
 .container .slider-button:after, 
@@ -270,4 +267,4 @@ body {
 
 .container .slider-button:before {
   transform: rotate(135deg);
-}
+} */
