@@ -229,7 +229,7 @@
 
         <div class='img-in-container foreground-img' style="background-image: url(./static/images/fisher_dozer.png); background-repeat: no-repeat;" id="fgImg"></div>
         
-        <input type="range" min="1" max="100" value="50" class="img-slider" id="imgSlider">
+        <input type="range" min="0" max="100" value="50" class="img-slider" id="imgSlider">
         <div class="subtitle top-left">Ours</div>
         <div class="subtitle top-right">FisherRF</div>
 
@@ -239,7 +239,6 @@
           var bg_img = document.getElementById("bgImg");
           
           slider.oninput = function() {
-            fg_img.style.width = this.value;
             fg_img.style.width = slider.value + "%";
           }
         </script>
