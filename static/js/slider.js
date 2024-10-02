@@ -1,6 +1,6 @@
 // Function to handle slider changes
 export function handleSliderChange() {
-  const sliderPos = imgSlider.target.value;
+  sliderPos = imgSlider.target.value;
   
   // Update the width of the foreground image
   document.querySelector('.foreground-img').style.width = `${sliderPos}%`;
@@ -10,7 +10,7 @@ export function handleSliderChange() {
 }
 
 // Get the slider element and add event listeners for 'input' and 'change'
-const imgSlider = document.getElementById("img-slider");
+const imgSlider = document.getElementById(".img-slider");
 imgSlider.addEventListener("input", handleSliderChange);
 imgSlider.addEventListener("change", handleSliderChange);
 
