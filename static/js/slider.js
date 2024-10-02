@@ -1,18 +1,27 @@
-// Function to handle slider changes
-export function handleSliderChange() {
-  const sliderPos = imgSlider.target.value;
-  
-  // Update the width of the foreground image
-  document.querySelector('.foreground-img').style.width = `${sliderPos}%`;
-  
-  // Update the position of the slider button
-  document.querySelector('.img-slider-button').style.left = `calc(${sliderPos}% - 18px)`;
+function initializeSlider() {
+  const slider = document.querySelector('.slider');
+  const container = document.querySelector('.container');
+
+  slider.addEventListener('input', function (e) {
+      container.style.setProperty('--position', e.target.value + '%');
+  });
 }
 
-// Get the slider element and add event listeners for 'input' and 'change'
-const imgSlider = document.getElementById("img-slider");
-imgSlider.addEventListener("input", handleSliderChange);
-imgSlider.addEventListener("change", handleSliderChange);
+// // Function to handle slider changes
+// export function handleSliderChange() {
+//   const sliderPos = imgSlider.target.value;
+  
+//   // Update the width of the foreground image
+//   document.querySelector('.foreground-img').style.width = `${sliderPos}%`;
+  
+//   // Update the position of the slider button
+//   document.querySelector('.img-slider-button').style.left = `calc(${sliderPos}% - 18px)`;
+// }
+
+// // Get the slider element and add event listeners for 'input' and 'change'
+// const imgSlider = document.getElementById("img-slider");
+// imgSlider.addEventListener("input", handleSliderChange);
+// imgSlider.addEventListener("change", handleSliderChange);
 
 
 // export function initComparisons() {
