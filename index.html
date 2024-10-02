@@ -221,7 +221,7 @@
           <div class="column is-full-width">
             <h2 class="title is-3">See how our augmentation compares with others!</h2>
             <h2 class="subtitle has-text-centered">Ours vs. FisherRF</h2>
-            <div class="image-comp-container">
+            <!-- <div class="image-comp-container">
               <div class="image-overlay">
                 <img src="static/images/ours_dozer.png" width="100%" height="800">
               </div>
@@ -232,15 +232,18 @@
             <script>
               import { initComparisons } from './static/js/slider.js';
               initComparisons();
-            </script>
+            </script> -->
 
-            <!-- second slider -->
-            <!-- <h2 class="subtitle has-text-centered">Ours vs. Entropy</h2>
-            <div class="image-container">
-              <img src="static/images/ours_chair.png" alt="Image 1" class="image img-left">
-              <div class="slider" id="slider"></div>
-              <img src="static/images/entropy_chair.png" alt="Image 2" class="image img-right">
-            </div> -->
+            <div class='container'>
+              <div class="background-img">
+                <img src="static/images/ours_dozer.png" width="100%" height="400">
+              </div>
+              <div class='img foreground-img'>
+                <img src="static/images/fisher_dozer.png" width="100%" height="400">
+              </div>
+              <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider">
+              <div class='slider-button'></div>
+            </div>
           </div>
         </div>
       </div>
