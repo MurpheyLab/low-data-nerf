@@ -230,18 +230,18 @@
           <div class='img-in-container foreground-img' style="background-image: url(./static/images/fisher_dozer.png);" id="fgImg"></div>
           
           <input type="range" min="1" max="100" value="50" class="img-slider" id="imgSlider">
-          <!-- <div class='img-slider-button' id="slider-button"></div> -->
+          <div class='img-slider-button' id="slider-button"></div>
 
           <script>
             var slider = document.getElementById("imgSlider");
             var fg_img = document.getElementById("fgImg");
             var bg_img = document.getElementById("bgImg");
-            // var slider_button = document.getElementById("slider-button");
+            var slider_button = document.getElementById("slider-button");
             
             slider.oninput = function() {
               fg_img.style.width = this.value;
               fg_img.style.width = slider.value + "%";
-              // slider_button.style.left = this.value - 18;
+              slider_button.style.left = this.value - 18;
             }
           </script>
         </div>

@@ -186,7 +186,7 @@ body {
 .img-container {
   position: relative;
   width: 400px;
-  height: 600px;
+  height: 400px;
   border: 2px solid white;
 }
 
@@ -250,7 +250,7 @@ body {
   align-items: center;
 }
 
-.img-slider-button:after, 
+/* .img-slider-button:after, 
 .img-slider-button:before {
   content: "";
   padding: 3px;
@@ -265,4 +265,4 @@ body {
 
 .img-slider-button:before {
   transform: rotate(135deg);
-}
+} */
