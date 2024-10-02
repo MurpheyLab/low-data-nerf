@@ -1,6 +1,6 @@
 // Function to handle slider changes
-export function handleSliderChange(e) {
-  const sliderPos = e.target.value;
+export function handleSliderChange() {
+  const sliderPos = imgSlider.target.value;
   
   // Update the width of the foreground image
   document.querySelector('.foreground-img').style.width = `${sliderPos}%`;
