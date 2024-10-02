@@ -1,9 +1,9 @@
-$("#img-slider").on("input change", (e)=>{
+document.getElementById("img-slider").on("input change", (e)=>{
   const sliderPos = e.target.value;
   // Update the width of the foreground image
-  $('.foreground-img').css('width', `${sliderPos}%`)
+  document.getElementById('.foreground-img').css('width', `${sliderPos}%`)
   // Update the position of the slider button
-  $('.img-slider-button').css('left', `calc(${sliderPos}% - 18px)`)
+  document.getElementById('.img-slider-button').css('left', `calc(${sliderPos}% - 18px)`)
 });
 
 // export function initComparisons() {
