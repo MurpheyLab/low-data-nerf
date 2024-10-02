@@ -225,18 +225,23 @@
           </div>
         </div>
         <div class='img-container'>
-          <div class="img background-img" style="background-image: url(https://i.imgur.com/s08MkXC.jpg);"></div>
-          <div class='img foreground-img' style="background-image: url(https://i.imgur.com/PfIWek4.jpg);"></div>]
+          <div class="img-in-container background-img" style="background-image: url(https://i.imgur.com/s08MkXC.jpg); background-repeat: no-repeat;" id="bgImg"></div>
+
+          <div class='img-in-container foreground-img' style="background-image: url(https://i.imgur.com/PfIWek4.jpg);" id="fgImg"></div>
+          
           <input type="range" min="1" max="100" value="50" class="img-slider" id="imgSlider">
-          <div class='img-slider-button'></div>
+          <!-- <div class='img-slider-button' id="slider-button"></div> -->
+
           <script>
             var slider = document.getElementById("imgSlider");
-            var fg_img = document.getElementsByClassName("img foreground-img");
-            var slider_button = document.getElementsByClassName("img-slider-button");
+            var fg_img = document.getElementById("fgImg");
+            var bg_img = document.getElementById("bgImg");
+            // var slider_button = document.getElementById("slider-button");
             
             slider.oninput = function() {
               fg_img.style.width = this.value;
-              slider_button.style.left = this.value - 18;
+              fg_img.style.width = slider.value + "%";
+              // slider_button.style.left = this.value - 18;
             }
           </script>
         </div>
