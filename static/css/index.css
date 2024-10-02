@@ -200,13 +200,13 @@ body {
 }
 
 .container .background-img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 
 .container .foreground-img {
   width: 50%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .container .slider {
@@ -229,7 +229,7 @@ body {
   -webkit-appearance: none;
   appearance: none;
   width: 6px;
-  height: 600px;
+  height: 400px;
   background: white;
   cursor: pointer;
 }
@@ -250,22 +250,24 @@ body {
   background-color: white;
   left: calc(50% - 18px);
   top: calc(50% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Equivalent to @include center */
+}
+
+.container .slider-button:after, 
+.container .slider-button:before {
+  content: "";
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
 }
 
 .container .slider-button:after {
-  content: '';
-  padding: 3px;
-  display: inline-block;
-  border: solid #5D5D5D;
-  border-width: 0 2px 2px 0;
   transform: rotate(-45deg);
 }
 
 .container .slider-button:before {
-  content: '';
-  padding: 3px;
-  display: inline-block;
-  border: solid #5D5D5D;
-  border-width: 0 2px 2px 0;
   transform: rotate(135deg);
 }
