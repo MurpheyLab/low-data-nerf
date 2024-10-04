@@ -223,25 +223,16 @@
             <h2 class="title is-3">See how our augmentation compares with others!</h2>
           </div>
         </div>
-      </div>
-      <div class='img-container'>
-        <div class="img-in-container background-img" style="background-image: url(./static/images/ours_dozer.png); background-repeat: no-repeat;" id="bgImg"></div>
+        <!-- TODO: turn this into a carousel? -->
+        <div class='img-container'>
+          <div class="img-in-container background-img" style="background-image: url(./static/images/ours_dozer.png); background-repeat: no-repeat;" id="bgImg"></div>
 
-        <div class='img-in-container foreground-img' style="background-image: url(./static/images/fisher_dozer.png); background-repeat: no-repeat;" id="fgImg"></div>
-        
-        <input type="range" min="0" max="100" value="50" class="img-slider" id="imgSlider">
-        <div class="subtitle top-left">FisherRF</div>
-        <div class="subtitle top-right">Ours</div>
-
-        <script>
-          var slider = document.getElementById("imgSlider");
-          var fg_img = document.getElementById("fgImg");
-          var bg_img = document.getElementById("bgImg");
+          <div class='img-in-container foreground-img' style="background-image: url(./static/images/fisher_dozer.png); background-repeat: no-repeat;" id="fgImg"></div>
           
-          slider.oninput = function() {
-            fg_img.style.width = slider.value + "%";
-          }
-        </script>
+          <input type="range" min="0" max="100" value="50" class="img-slider" id="imgSlider">
+          <div class="subtitle top-left">FisherRF</div>
+          <div class="subtitle top-right">Ours</div>
+        </div>
       </div>
     </section>
 
@@ -576,6 +567,16 @@
     </div>
   </div>
 </footer>
+
+<script>
+  var slider = document.getElementById("imgSlider");
+  var fg_img = document.getElementById("fgImg");
+  var bg_img = document.getElementById("bgImg");
+  
+  slider.oninput = function() {
+    fg_img.style.width = slider.value + "%";
+  }
+</script>
 
 </body>
 </html>
