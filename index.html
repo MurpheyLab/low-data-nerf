@@ -233,7 +233,7 @@
           <div class="subtitle top-left">FisherRF</div>
           <div class="subtitle top-right">Ours</div>
         </div>
-        <!-- <div class='img-container'></div>
+        <div class='img-container'>
           <div class="img-in-container background-img" style="background-image: url(./static/images/ours_chair.png); background-repeat: no-repeat;" id="bgImg2"></div>
 
           <div class='img-in-container foreground-img' style="background-image: url(./static/images/entropy_chair.png); background-repeat: no-repeat;" id="fgImg2"></div>
@@ -251,7 +251,7 @@
         <input type="range" min="0" max="100" value="50" class="img-slider" id="imgSlider3">
         <div class="subtitle top-left">Uniform</div>
         <div class="subtitle top-right">Ours</div>
-      </div> -->
+      </div>
     </section>
 
     <section class="section">
@@ -601,7 +601,11 @@
   
   slider.oninput = function() {
     fg_img.style.width = slider.value + "%";
+  }
+  slider2.oninput = function() {
     fg_img2.style.width = slider2.value + "%";
+  }
+  slider3.oninput = function() {
     fg_img3.style.width = slider3.value + "%";
   }
 </script>
