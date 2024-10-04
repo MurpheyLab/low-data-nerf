@@ -233,6 +233,24 @@
           <div class="subtitle top-left">FisherRF</div>
           <div class="subtitle top-right">Ours</div>
         </div>
+        <div class='img-container'></div>
+          <div class="img-in-container background-img" style="background-image: url(./static/images/ours_chair.png); background-repeat: no-repeat;" id="bgImg2"></div>
+
+          <div class='img-in-container foreground-img' style="background-image: url(./static/images/entropy_chair.png); background-repeat: no-repeat;" id="fgImg2"></div>
+          
+          <input type="range" min="0" max="100" value="50" class="img-slider" id="imgSlider2">
+          <div class="subtitle top-left">Entropy</div>
+          <div class="subtitle top-right">Ours</div>
+        </div>
+      </div>
+      <div class='img-container'>
+        <div class="img-in-container background-img" style="background-image: url(./static/images/ours_materials.png); background-repeat: no-repeat;" id="bgImg3"></div>
+
+        <div class='img-in-container foreground-img' style="background-image: url(./static/images/uniform_materials.png); background-repeat: no-repeat;" id="fgImg3"></div>
+        
+        <input type="range" min="0" max="100" value="50" class="img-slider" id="imgSlider3">
+        <div class="subtitle top-left">Uniform</div>
+        <div class="subtitle top-right">Ours</div>
       </div>
     </section>
 
@@ -572,9 +590,19 @@
   var slider = document.getElementById("imgSlider");
   var fg_img = document.getElementById("fgImg");
   var bg_img = document.getElementById("bgImg");
+
+  var slider2 = document.getElementById("imgSlider2");
+  var fg_img2 = document.getElementById("fgImg2");
+  var bg_img2 = document.getElementById("bgImg2");
+
+  var slider3 = document.getElementById("imgSlider3");
+  var fg_img3 = document.getElementById("fgImg3");
+  var bg_img3 = document.getElementById("bgImg3");
   
   slider.oninput = function() {
     fg_img.style.width = slider.value + "%";
+    fg_img2.style.width = slider2.value + "%";
+    fg_img3.style.width = slider3.value + "%";
   }
 </script>
 
