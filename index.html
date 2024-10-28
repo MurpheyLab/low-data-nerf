@@ -25,6 +25,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="./static/js/slider.js"></script>
 
 
 </head>
@@ -158,34 +159,32 @@
 </section>
 
 
-<div class="container is-max-desktop">
+<!-- <div class="container is-max-desktop">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <!-- <h2 class="title is-3">Come back soon!</h2> -->
       <div class="content has-text-justified">
         <p>
           We propose a method for augmenting training data for NeRFs trained with sparse images. We use rejection sampling to select N additional views from a distribution that captures both model-based, in-distribution and scene-based out-of-distribution uncertainty. Our method is easy to implement and can be incorporated with the Nerfstudio python package with minimal overhead.
         </p>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
         <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/ICRA_2025_compress.mp4"
+          <source src="./static/videos/main_video_renders.mp4"
                   type="video/mp4">
         </video>
         </script>
-        <!-- <h2 class="subtitle has-text-centered">
-          <span class="dnerf">Nerfies</span> turns selfie videos from your phone into free-viewpoint portraits.
-           This video accompanies our paper submission.
-        </h2> -->
-        <h2 class="subtitle has-text-centered"></h2>
-           Only our data augmentation method generates reasonable scene reconstructions without visual artifacts.
-           This video outlines our process and compares performance with other data augmentation methods.
+        <h2 class="subtitle has-text-centered">
+        <!-- <h2 class="title is-3"></h2> -->
+           Only our data augmentation method generates reasonable scene reconstructions without visual artifacts. 
+           Hallucinations, occlusions, and other visual artifacts are common when training with sparse data.
+           a) shows ground truth, b) shows our method, c) shows hallucinations (data augmented by <a href="https://arxiv.org/abs/2311.17874">FisherRF</a> method), 
+           and d) shows white spots (data collected by <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9913658">Entropy</a> method).
         </h2>
       </div>
     </div>
@@ -215,6 +214,36 @@
       </div>
       <!-- / Abstract. -->
     </div>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">See how our augmentation compares with others!</h2>
+            <h2 class="subtitle has-text-centered">Ours vs. FisherRF</h2>
+            <!-- <div class="image-comp-container">
+              <div class="image-overlay">
+                <img src="static/images/ours_dozer.png" width="100%" height="800">
+              </div>
+              <div class="image-overlay image-compare">
+                <img src="static/images/fisher_dozer.png" width="100%" height="800">
+              </div>
+            </div>
+            <script>
+              import { initComparisons } from './static/js/slider.js';
+              initComparisons();
+            </script> -->
+
+            <!-- <div class='container'>
+              <div class="img background-img" style="background-image: url(static/images/ours_dozer.png);"></div>
+              <div class='img foreground-img' style="background-image: url(static/images/fisher_dozer.png);"></div>
+              <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider">
+              <div class='slider-button'></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section">
       <div class="container is-max-desktop">
