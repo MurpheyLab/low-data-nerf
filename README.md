@@ -1,4 +1,4 @@
-# Nerfies
+# Low Data NeRF
 
 This is the repository that contains source code for [Low Data Nerf](https://murpheylab.github.io/low-data-nerf/) website, where you can also find links to our [Github repo](https://github.com/Agaggar/nerfstudio-low-data) and our paper (once accepted).
 
